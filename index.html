@@ -3,31 +3,74 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Inspire</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	 crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+	 crossorigin="anonymous">
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body id="body">
-	<div id="weather">
-		Your Weather Template
+
+	<div class="container-fluid">
+		<div class="row ">
+			<div class="col-12 d-flex justify-content-start">
+				<div id="weather">
+
+				</div>
+			</div>
+		</div>
+
+		<div class="row d-flex align-items-stretch">
+			<div class="col-12 mt-4 mb-4 d-flex justify-content-center">
+				<div class="jumbotron jumbotron-fluid special-card font-shadow">
+					<div class="container" id="injectQuote">
+						<!-- <h1 class="">With great power comes great responsibility.</h1> -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-12 d-flex justify-content-end">
+				<div id="todo">
+					<div class="card special-card border-light font-shadow" style="width: 18rem;">
+						<div class="card-header border-light d-flex justify-content-center">
+							To Do List
+						</div>
+						<ul id="todo-list" class="list-group list-group-flush todolayout">
+							<!--This is were todos will go-->
+							<!-- <div class="form-check ml-1">
+									<input type="checkbox" class="form-check-input" id="exampleCheck1">
+									<label class="form-check-label" for="exampleCheck1">To Do 1</label>
+								</div> -->
+							<!--This is where todo list ends-->
+							<!--</div>-->
+						</ul>
+					</div>
+					<form onsubmit="app.controllers.todoController.addTodoFromForm(event)">
+						<div class="input-group mb-3 mt-1" style="width:18rem;">
+							<input type="text" class="form-control special-card" placeholder2="Add Todo" aria-label="Recipient's username"
+							 aria-describedby="button-addon2" name="description">
+							<div class="input-group-append">
+								<button class="btn btn-outline-secondary font-shadow border-light" type="submit" id="button-addon2">Add
+									Todo</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
 	</div>
 
-	<div id="quote">
-		The Quote
-	</div>
-
-	<div id="todo">
-		<form onsubmit=""></form>
-		A Todo List
-	</div>
+</body>
 
 
+<!--JS Libraries-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+<!--Initialize App-->
 
-
-	<!--JS Libraries-->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
-	<!--Initialize App-->
-
-	<script type='module' src="app/main.js"></script>
+<script type='module' src="app/main.js"></script>
 </body>
 
 </html>

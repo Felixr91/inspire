@@ -1,0 +1,26 @@
+body{
+  background-color: #cccccc;
+  height: 500px; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+.todolayout {
+  list-style-type: none;
+}
+
+.special-card{
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.font-shadow{
+  color: white;
+  text-shadow: 0 0 5px black;
+}
+
+::placeholder2{
+  color: white;
+  text-shadow: 0 0 5px black;
+}

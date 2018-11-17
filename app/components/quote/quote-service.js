@@ -1,8 +1,6 @@
 let url = '//bcw-getter.herokuapp.com/?url=';
 let url2 = 'https://favqs.com/api/qotd';
 let apiUrl = url + encodeURIComponent(url2);
-//Do Not Edit above we have to go through the bcw-getter to access this api
-
 
 const quoteApi = axios.create({
 	baseURL: apiUrl,
@@ -11,10 +9,12 @@ const quoteApi = axios.create({
 
 
 export default class QuoteService {
-	getQuote(callWhenDone) {
+	getQuote(drawQuote) {
 		console.log('looking for some good quotes')
 		quoteApi().then((res) => {
-			callWhenDone(res.data)
+			console.log(res.data.quote.body)
+			let quote = res.data.quote.body
+			drawQuote(quote)
 		})
 	}
 }
