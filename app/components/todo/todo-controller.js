@@ -32,7 +32,6 @@ function draw(todos) {
 export default class TodoController {
 	constructor() {
 		todoService.getTodos(draw)
-		todoService.getTodos(draw)
 	}
 
 
